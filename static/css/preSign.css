@@ -1,0 +1,143 @@
+body {
+    background-color: #E3E3E3;
+}
+div.title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    display:inline-block;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+    border-bottom: 5px solid #67D37E;
+}
+/*要求*/
+#request {
+    text-align: center;
+    overflow: auto;
+}
+#request .content>div {
+    width: 25%;
+    float: left;
+}
+#request h3 {
+    font-weight: bold;
+}
+#request .content ol {
+    padding-left: 3em;
+    text-align: left;
+}
+
+@media only screen and (max-width:992px) {
+    #request .content>div {
+        width: 50%;
+    }
+    #request .placeholder {
+        clear: both;
+    }
+}
+@media only screen and (max-width:768px) {
+    #request .content>div {
+        width: 100%;
+        float: left;
+    }
+    #request .content ol {
+        padding: 0 5em;
+    }
+    #request div.title {
+        font-size: 25px;
+    }
+}
+/*表单*/
+#form {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    text-align: center;
+    padding: 0 15px;
+    max-width: 1150px;
+}
+#form form {
+    margin: 30px 0;
+}
+#form .help-block {
+    text-align: left;
+}
+#form textarea {
+    resize: none;
+}
+#form label {
+    font-size: 18px;
+}
+#form .form-group {
+    margin-top: 15px;
+}
+#form textarea,
+#form select,
+#form input {
+    font-size: 15px;
+}
+#form .submit-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: white;
+    background-color: #606060;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+/*#form .submit-btn {*/
+    /*width: 100%;*/
+    /*padding: 10px;*/
+    /*margin-top: 20px;*/
+    /*color: white;*/
+    /*background-color: #67D37E;*/
+    /*font-size: 18px;*/
+    /*border: none;*/
+    /*border-radius: 5px;*/
+/*}*/
+/*#form .submit-btn:hover {*/
+    /*background-color: #51a25c;*/
+/*}*/
+
+/*自制模态框*/
+#alert {
+    display: none;
+    z-index: 100;
+    padding: 10px;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+#alert>div {
+    position: relative;
+    top: calc(50% - 50px);
+    margin: 0 auto;
+    max-width: 300px;
+    width: 80%;
+    height: 100px;
+    background-color: rgb(255,255,255);
+    color: gray;
+    border-radius: 5px;
+}
+#alert p {
+    font-size: 25px;
+    border-bottom: 1px solid gray;
+}
+#alert p,
+#alert span.message {
+    padding: 0 10px;
+}
+#alert .remove{
+    position: absolute;
+    right: 7px;
+    top:7px;
+    font-size: 20px;
+    color: gray;
+}
+#alert .remove:hover {
+    color: black;
+}

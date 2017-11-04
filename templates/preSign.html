@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>暨南大学网络技术研讨会——主页</title>
+    <link rel="shortcut icon" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="bookmark" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link type="text/css" rel="stylesheet" href="static/css/comment.css" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="static/css/preSign.css" />
+</head>
+<body>
+
+<nav>
+    <img src="http://ovo9m1uaz.bkt.clouddn.com/home1.png" />
+    <ul id="list">
+        <li><a href="/login"><span class="glyphicon glyphicon-user"></span><span>登录</span></a></li>
+        <li><a href="/enrol"><span class="glyphicon glyphicon-send"></span><span>预报名</span></a></li>
+        <li><a href="/mascot"><span class="glyphicon glyphicon-heart"></span><span>我暨&我南</span></a></li>
+        <li><a href="/join_us"><span class="glyphicon glyphicon-plus"></span><span>加入我们</span></a></li>
+        <li><a href="/we_are"><span class="glyphicon glyphicon-bookmark"></span><span>我们是</span></a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-home"></span><span>主页</span></a></li>
+    </ul>
+    <!--菜单栏按钮-->
+    <button id="list-btn" class="btn btn-default visible-xs"><span class="glyphicon glyphicon-align-justify"></span></button>
+</nav>
+<!--此处任意内容-->
+<section id="request">
+    <div class="title">关于招新的一点点要求</div>
+    <div class="content">
+        <div>
+            <h3>运营组</h3>
+            <ol>
+                <li>积极负责，创新性强</li>
+                <li>有一颗热爱运营的心</li>
+                <li>有团队协作能力</li>
+                <li>快来和我们一起玩儿吧~</li>
+            </ol>
+        </div>
+        <div>
+            <h3>媒宣组</h3>
+            <ol>
+                <li>兴趣是最好的老师</li>
+                <li>对修图(颜值)感兴趣就行</li>
+                <li>乐于学习，渴望成长</li>
+                <li>有责任心</li>
+            </ol>
+        </div>
+        <div class="placeholder"></div>
+        <div>
+            <h3>技术组</h3>
+            <ol>
+                <li>对技术有兴趣</li>
+                <li>不要盲目崇拜某种技术</li>
+            </ol>
+        </div>
+        <div>
+            <h3>游戏组</h3>
+            <ol>
+                <li>热爱游戏，有一定的游戏经验</li>
+                <li>对游戏设计/制作有兴趣</li>
+                <li>想自己亲自设计，亲手制作自己喜欢的游戏</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<!--表单-->
+<section id="form">
+    <div class="title">预报名</div>
+    <form role="form">
+        <div class="form-group input-group-lg">
+            <label class="control-label" for="name">姓名：</label>
+            <input class="form-control" type="text" placeholder="" name="name" >
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group input-group-lg">
+            <label class="control-label" for="name">邮箱：</label>
+            <input class="form-control" type="text" placeholder="" name="email">
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group input-group-lg">
+            <label class="control-label" for="name">电话：</label>
+            <input class="form-control" type="text" placeholder="" name="phone">
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group input-group-lg">
+            <label class="control-label" for="name">学号：</label>
+            <input class="form-control" type="text" placeholder="" name="student_id">
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group input-group-lg">
+            <label class="control-label" for="name">年级：</label>
+            <select class="form-control" name="grade">
+                <option>大一</option>
+                <option>大二</option>
+                <option>大三</option>
+                <option>大四</option>
+            </select>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group input-group-lg">
+            <label class="control-label" for="name">申请部门：</label>
+            <select class="form-control" name="department">
+                <option>运营组</option>
+                <option>媒宣组</option>
+                <option>技术组</option>
+                <option>游戏组</option>
+            </select>
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group input-group-lg">
+            <label class="control-label" for="name">学院专业：</label>
+            <input class="form-control" type="text" placeholder="非番禺校区的同学请注明校区" name="major">
+            <span class="help-block"></span>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="name">自我介绍：</label>
+            <textarea class="form-control" rows="3" name="introduction" placeholder="注明性别"></textarea>
+            <span class="help-block"></span>
+        </div>
+        <button type="submit" class="submit-btn" disabled>报名截至了</button>
+    </form>
+</section>
+
+<div id="alert">
+    <div>
+        <p class="title"></p>
+        <span class="message"></span>
+        <span class="glyphicon glyphicon-remove remove"></span>
+    </div>
+</div>
+
+<!--脚部-->
+<footer>
+    <span>Copyright © 暨南大学网络技术研讨会 2016-2017.</span>
+</footer>
+
+<!--回滚按钮-->
+<div class="slideToTop"><span class="glyphicon glyphicon-chevron-up"></span></div>
+
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="static/javascript/comment.js" ></script>
+<script src="static/javascript/preSign.js" ></script>
+<script src="static/javascript/jquery.cookie.js" ></script>
+</body>
+</html>

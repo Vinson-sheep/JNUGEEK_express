@@ -1,0 +1,229 @@
+body {
+    background-color: #e3e3e3;
+}
+section {
+    text-align: center;
+}
+.title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    display:inline-block;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+    border-bottom: 5px solid #00736d;
+}
+
+/*各组介绍*/
+#group-intro {
+    padding: 0 15px;
+    overflow: auto;
+    color: white;
+    font-weight: bold;
+}
+#group-intro .pic {
+    background-color: #00c6e3;
+}
+#group-intro .pic>div.img {
+    width: 25%;
+    height: 500px;
+    float: left;
+}
+#group-intro div.pic>div {
+    padding: 10px;
+    background-size: 100% 100%;
+}
+#group-intro div.pic>div:nth-of-type(1) {
+    background-image: url(http://ovo9m1uaz.bkt.clouddn.com/join_us1.png);
+}
+#group-intro div.pic>div:nth-of-type(2) {
+    background-image: url(http://ovo9m1uaz.bkt.clouddn.com/join_2.png);
+}
+
+#group-intro div.pic>div:nth-of-type(3) {
+    background-image: url(http://ovo9m1uaz.bkt.clouddn.com/join_3.png);
+}
+#group-intro div.pic>div:nth-of-type(4) {
+    background-image: url(http://ovo9m1uaz.bkt.clouddn.com/join_4.png);
+}
+
+@media only screen and (max-width: 992px) {
+    #group-intro .pic>div.img {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /*#group-intro {*/
+        /*padding: 0 30px;*/
+    /*}*/
+    #group-intro .pic>div.img {
+        width: 100%;
+        height: 400px;
+    }
+}
+#group-intro h1 {
+    font-weight: bolder;
+}
+#group-intro .strong {
+    margin: 0;
+    text-align: center;
+    font-size: 23px;
+}
+#group-intro span.intro {
+    opacity: 0.8;
+}
+#group-intro div.img>span {
+    display: block;
+    font-size: 20px;
+    text-align: left;
+}
+#group-intro img.small {
+    width: 20px;
+}
+@media only screen and (max-width: 768px) {
+    #group-intro div.img>span {
+        font-size: 15px;
+        line-height: 2em;
+    }
+    #group-intro h1 {
+        margin-top: 5px;
+    }
+}
+
+/*全体导师*/
+#all-teachers {
+    overflow: auto;
+}
+#all-teachers h3 {
+    font-weight: bold;
+}
+#all-teachers .intro {
+    padding: 0 10px;
+    font-weight: bold;
+}
+#all-teachers .intro>div {
+    width: 25%;
+    float: left;
+}
+@media only screen and (max-width: 992px) {
+    #all-teachers .intro>div {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #all-teachers .intro>div {
+        width: 100%;
+    }
+}
+
+/*成员介绍*/
+#member-intro .intro {
+    padding: 0 10px;
+}
+#member-intro .content {
+    overflow: auto;
+}
+#member-intro .content>div {
+    position: relative;
+    padding: 20px;
+    width: 25.00%;
+    float: left;
+}
+#member-intro img {
+    width: 100%;
+}
+#member-intro .intro {
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+}
+#member-intro .intro>div {
+    height: 100%;
+    overflow: hidden;
+}
+#member-intro .placeholder {
+    height: 85%;
+}
+#member-intro .intro h3 {
+    margin: 0;
+    height: 15%;
+    background-color: rgba(0,0,0,0.8);
+    line-height: 200%;
+}
+#member-intro .intro p {
+    height: 85%;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.6);
+    text-align: left;
+    font-size: 18px;
+}
+@media only screen and (max-width: 1136px) {
+    #member-intro .intro p {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    #member-intro .content>div {
+        width:33.3%;
+    }
+    #member-intro .intro p {
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #member-intro .content>div {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #member-intro .content>div {
+        width: 100%;
+    }
+}
+/*修复特定点的BUG*/
+#member-intro .content>div.fix1 {
+    width:100%;
+    height: 0;
+}
+@media only screen and (max-width: 992px) {
+    #member-intro .content>div.fix1 {
+        display: none;
+    }
+}
+
+/*品牌活动*/
+#fesvital {
+    padding: 0 10px;
+    clear: both;
+}
+#fesvital .intro {
+    margin-top: 10px;
+    font-size: 25px;
+    line-height: 2em;
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+    #fesvital .intro {
+        font-size: 20px;
+    }
+}
+
+/*预报名*/
+#btn {
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+#btn button{
+    width: 70%;
+    padding: 10px 0;
+    color: white;
+    background-color: #00736d;
+    font-weight: bold;
+    font-size: 25px;
+    border: none;
+}

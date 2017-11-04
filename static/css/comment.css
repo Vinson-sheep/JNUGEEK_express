@@ -1,0 +1,107 @@
+/*通用部分*/
+body,* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+input,input:focus,input:active{user-select: text;}
+/*清除iphone原有样式*/
+input[type="text"],input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;}
+textarea {-webkit-appearance: none;}
+
+ul {
+    list-style: none;
+}
+.center {
+    text-align: center;
+}
+/*导航栏*/
+nav {
+    padding: 0 25px;
+    background-color: black;
+    overflow: hidden;
+    height: 40px;
+}
+nav img {
+    padding: 3px 0;
+    float: left;
+    height: 100%;
+}
+nav li span:first-child {
+    padding-right: 5px;
+}
+nav a {
+    margin-left: 10px;
+    float: right;
+    font-size: 18px;
+    color: white;
+    line-height: 2.3em;
+
+    transition: color 1s;
+    -webkit-transition: color 1s;
+}
+nav a:hover {
+    color: #00c6e3;
+    text-decoration: none;
+}
+nav button {
+    float: right;
+    margin: 0;
+    height: 34px;
+    margin: 2px 0;
+}
+@media only screen and (max-width: 768px) {
+    nav ul {
+        z-index: 100;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        background-color: rgba(0,0,0,0.6);
+        color: white;
+        overflow: auto;
+    }
+    nav a {
+        float: none;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+        overflow: auto;
+        text-align: left;
+        border-bottom: 1px solid rgba(245, 245, 245,0.1);
+    }
+    nav ul li:hover {
+        background-color: rgba(45, 145, 203,0.6);
+    }
+}
+/*footer*/
+footer {
+    margin-top: 20px;
+    padding: 30px 0;
+    background-color: black;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+@media only screen and (max-width: 768px){
+    footer {
+        padding: 15px 0;
+        font-size: 10px;
+    }
+}
+
+/*回滚按钮*/
+.slideToTop {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    padding: 5px 15px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 30px;
+}

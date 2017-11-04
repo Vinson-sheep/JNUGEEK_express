@@ -1,0 +1,232 @@
+/*轮播*/
+#roasting {
+    margin-top: 20px;
+}
+#roasting img {
+    width: 100%;
+}
+
+/*招募令*/
+#recruit {
+    margin-top: 20px;
+}
+#recruit .header {
+    height: 250px;
+    background-color: #c34c39;
+    background-image: url(http://ovo9m1uaz.bkt.clouddn.com/home3.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+@media only screen and (max-width: 768px) {
+    #recruit .header {
+        height: 150px;
+    }
+
+}
+#recruit .header>div {
+    float: right;
+    padding-right: 50px;
+    width: 50%;
+    height: 100%;
+    font-size: 200px;
+    color: white;
+    text-align: right;
+}
+#recruit .video {
+    padding: 50px;
+    overflow: auto;
+    background-color: #33888f;
+    background-image: url(http://ovo9m1uaz.bkt.clouddn.com/home4.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+#recruit .video>div {
+    width: 50%;
+    float: left;
+}
+
+#recruit .context {
+    padding-top: 50px;
+    color: white;
+}
+@media only screen and (max-width: 768px){
+    #recruit .video>div {
+        width: 100%;
+    }
+    #recruit .video {
+        padding: 10px;
+    }
+    #recruit .context {
+        padding-top: 10px;
+    }
+}
+#recruit .context>span {
+    line-height: 1em;
+}
+#recruit .context>span:nth-of-type(1) { font-size: 70px; }
+#recruit .context>span:nth-of-type(2) { font-size: 35px; }
+#recruit .context>span:nth-of-type(3) { font-size: 45px; }
+#recruit .context>span:nth-of-type(4) { font-size: 65px; }
+#recruit .context>span:nth-of-type(5) { font-size: 15px; font-weight:bold;display: inline-block;margin-top: 10px;line-height: 1.2em}
+#recruit .context a {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    opacity: 0.6;
+}
+#recruit .join-us {
+    padding: 30px;
+    overflow: auto;
+    background-color: #75b46e;
+}
+#recruit .join-us>div {
+    width: 50%;
+    float: left;
+}
+#recruit .context2 {
+    padding-top: 20px;
+    text-align: right;
+    font-size: 30px;
+    color: white;
+}
+#recruit .context2>span:nth-of-type(1) { font-size: 55px; }
+#recruit .context2>span:nth-of-type(2) { font-size: 45px; }
+#recruit .context2>span:nth-of-type(3) { font-size: 35px; }
+#recruit .context2>span:nth-of-type(4) { font-size: 25px; }
+#recruit .pic2 {
+    text-align: center;
+}
+#recruit .pic2 img {
+    width: 400px;
+}
+@media only screen and (max-width: 768px){
+    #recruit .join-us {
+        padding: 10px;
+    }
+    #recruit .context2 {
+        padding-top: 0;
+        font-size: 20px;
+    }
+    #recruit .join-us>div {
+        width: 100%;
+    }
+    #recruit .pic2 img {
+        width: 300px;
+    }
+    #recruit .context2>span:nth-of-type(1) { font-size: 45px; }
+    #recruit .context2>span:nth-of-type(2) { font-size: 35px; }
+    #recruit .context2>span:nth-of-type(3) { font-size: 25px; }
+    #recruit .context2>span:nth-of-type(4) { font-size: 20px; }
+}
+#recruit .context2 button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #269b5c;
+    color: white;
+    font-weight: bold;
+}
+#recruit .context2 button:hover {
+    background-color: #1e6e3c;
+}
+/*开学季*/
+#school-season {
+    margin-top: 20px;
+}
+#school-season .header {
+    height: 250px;
+    background-color: #f39800;
+    background-image: url(http://ovo9m1uaz.bkt.clouddn.com/home6.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%
+}
+#school-season .header>div {
+    float: right;
+    padding-right: 50px;
+    width: 50%;
+    height: 100%;
+    font-size: 200px;
+    color: white;
+    text-align: right;
+}
+@media only screen and (max-width: 768px) {
+    #school-season .header {
+        height: 150px;
+    }
+
+}
+#school-season .intro {
+    padding: 50px;
+    background-color: #f8b551;
+    background-image: url(http://ovo9m1uaz.bkt.clouddn.com/home7.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    overflow: auto;
+}
+#school-season .intro>div {
+    width: 50%;
+    float: left;
+}
+#school-season .context {
+    color:black;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: right;
+}
+#school-season .context>span:nth-of-type(1){ font-size:40px; }
+#school-season .context>span:nth-of-type(2){ font-size:25px; }
+#school-season .context>span:nth-of-type(3){ font-size:25px; }
+#school-season .context>span:nth-of-type(4){ font-size:35px; }
+#school-season .context>span:nth-of-type(5){ font-size:40px; }
+#school-season .mascot img {
+    width: 100%;
+}
+@media only screen and (max-width: 768px){
+    #school-season .intro>div {
+        width: 100%;
+    }
+    #school-season .context {
+        font-size: 20px;
+    }
+    #school-season .intro {
+        padding: 10px;
+    }
+}
+#school-season .code {
+    padding: 50px;
+    background-color: #fff45c;
+    overflow: auto;
+    text-align: center;
+}
+#school-season .code>div {
+    margin-top: 20px;
+    width: 50%;
+    float: left;
+}
+#school-season .code>div>div {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: justify;
+}
+#school-season .code>div>span:nth-of-type(1) {
+    display: block;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+#school-season .code>div>span:nth-of-type(2) {
+    display: block;
+    padding: 0 50px;
+}
+#school-season .code img {
+    width: 50%;
+}
+@media only screen and (max-width: 768px){
+    #school-season .code>div {
+        width: 100%;
+    }
+    #school-season .code {
+        padding: 10px;
+    }
+    #school-season .code>div>span:nth-of-type(2) {
+        padding: 0 10px;
+    }
+}

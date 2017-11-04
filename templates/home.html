@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>暨南大学网络技术研讨会——主页</title>
+    <link rel="shortcut icon" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="bookmark" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link type="text/css" rel="stylesheet" href="static/css/comment.css" />
+    <link type="text/css" rel="stylesheet" href="static/css/home.css" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/css/willesPlay.css"/>
+</head>
+<body>
+
+<nav>
+    <img src="http://ovo9m1uaz.bkt.clouddn.com/home1.png" />
+    <ul id="list">
+        <li><a href="/login"><span class="glyphicon glyphicon-user"></span><span>登录</span></a></li>
+        <li><a href="/enrol"><span class="glyphicon glyphicon-send"></span><span>预报名</span></a></li>
+        <li><a href="/mascot"><span class="glyphicon glyphicon-heart"></span><span>我暨&我南</span></a></li>
+        <li><a href="/join_us"><span class="glyphicon glyphicon-plus"></span><span>加入我们</span></a></li>
+        <li><a href="/we_are"><span class="glyphicon glyphicon-bookmark"></span><span>我们是</span></a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-home"></span><span>主页</span></a></li>
+    </ul>
+    <!--菜单栏按钮-->
+    <button id="list-btn" class="btn btn-default visible-xs"><span class="glyphicon glyphicon-align-justify"></span></button>
+</nav>
+
+<section id="roasting">
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="http://ovo9m1uaz.bkt.clouddn.com/side1.jpg" alt="First slide">
+            </div>
+            <div class="item">
+                <img src="http://ovo9m1uaz.bkt.clouddn.com/side2.jpg" alt="Second slide">
+            </div>
+            <div class="item">
+                <img src="http://ovo9m1uaz.bkt.clouddn.com/slide3.jpg" alt="Third slide">
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel"
+           data-slide="prev">&lsaquo;
+        </a>
+        <a class="carousel-control right" href="#myCarousel"
+           data-slide="next">&rsaquo;
+        </a>
+    </div>
+</section>
+
+<section id="recruit">
+    <!--红色-->
+    <div class="header">
+        <div class="pic hidden-xs hidden-md"><span class="glyphicon glyphicon-leaf"></span></div>
+    </div>
+    <!--蓝色-->
+    <div class="video">
+        <div class="context">
+            <!--文字-->
+            <span>运营组</span><br />
+            <span>游戏组</span><br />
+            <span>媒宣组</span><br />
+            <span>技术组</span><br />
+            <a href="https://www.bilibili.com/video/av14299635/"><span class="glyphicon glyphicon-chevron-right"></span><span>点击此处前往billbill弹幕网播放宣传视频</span></a><br />
+            <span>we are a young yet full of passion team<br/>
+            which believes in fighting for meaningful things</span>
+        </div>
+        <div class="media">
+            <!--播放器-->
+            <div id="willesPlay">
+                <div class="playHeader">
+                    <div class="videoName">网研会宣传视频</div>
+                </div>
+                <div class="playContent">
+                    <video width="100%" height="100%" id="playVideo">
+                        <source src="http://ovo9m1uaz.bkt.clouddn.com/vedio.mp4"></source>
+                        当前浏览器不支持 video直接播放，点击这里下载视频： <a href="/">下载视频</a>
+                    </video>
+                    <div class="playTip glyphicon glyphicon-play"></div>
+                </div>
+                <div class="playControll">
+                    <div class="playPause playIcon"></div>
+                    <div class="timebar">
+                        <span class="currentTime">0:00:00</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                        </div>
+                        <span class="duration">0:00:00</span>
+                    </div>
+                    <div class="otherControl">
+                        <span class="volume glyphicon glyphicon-volume-down"></span>
+                        <span class="fullScreen glyphicon glyphicon-fullscreen"></span>
+                        <div class="volumeBar">
+                            <div class="volumewrap">
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 8px;height: 40%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--播放器结束-->
+        </div>
+    </div>
+    <!--绿色-->
+    <div class="join-us">
+        <div class="context2">
+            带你学最炫的<span>技术</span><br />
+            带你做最酷的<span>策划</span><br />
+            带你学最炫的<span>技术</span><br />
+            <span>we are always be here waiting<br />for your comming</span><br />
+            <a href="/join_us"><button>join us</button></a>
+        </div>
+        <div class="pic2">
+            <img src="http://ovo9m1uaz.bkt.clouddn.com/home5.png" />
+        </div>
+    </div>
+</section>
+
+<section id="school-season">
+    <!--橙色-->
+    <div class="header">
+        <div class="pic hidden-xs hidden-md"><span class="glyphicon glyphicon-flag"></span></div>
+    </div>
+    <!--橙黄色-->
+    <div class="intro">
+        <div class="context">
+            <!--文字-->
+            <span>九月</span>，又是开学的季节<br/>
+            一想到又有一堆小鲜肉要来了<br/>
+            <span>暨妹妹</span>&<span>南同学</span>真是超开心<br/>
+            什么<br/>
+            交通？<span>住宿</span>？地图<br/>
+            学费？伙食<br/>
+            慢着慢着<br/>
+            关注下面<span>二维码</span><br/>
+            直接来撩我们吧
+        </div>
+        <div class="mascot">
+            <!--吉祥物-->
+            <img src="http://ovo9m1uaz.bkt.clouddn.com/home8.png" />
+        </div>
+    </div>
+    <!--黄色-->
+    <div class="code">
+        <div>
+            <img src="http://ovo9m1uaz.bkt.clouddn.com/home9.jpg" /><br/>
+            <span>直播搞事暨妹妹</span><br/>
+            <div>
+                <span>&nbsp【暨妹妹】暨南人必备萌宠。校园卡余额和课表成绩查询，校内新闻通知，失物招寻吐槽鸡汤一网打尽。做有生活气息的公众号，方便丰富你的大学生活。</span>
+            </div>
+        </div>
+        <div>
+            <img src="http://ovo9m1uaz.bkt.clouddn.com/home10.jpg" /><br/>
+            <span>擅长撩妹南同学</span><br/>
+            <div>
+                <span>&nbsp【南同学】最会撩人的南同学。校历校车校区地图地铁线地图，合作投稿功能齐全。辅助学习必备好手，专解生活疑难杂症。想要撩得好妹的同志们，请找南同学。</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--脚部-->
+<footer>
+    <span>Copyright © 暨南大学网络技术研讨会 2016-2017.</span>
+</footer>
+
+<!--回滚按钮-->
+<div class="slideToTop"><span class="glyphicon glyphicon-chevron-up"></span></div>
+
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="static/javascript/comment.js" ></script>
+<script src="static/javascript/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="static/javascript/willesPlay.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

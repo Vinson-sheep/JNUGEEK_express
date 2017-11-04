@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=720,inital-scale=1.0,user-scalable=no;">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>双十一调查问卷</title>
+    <link rel="shortcut icon" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="bookmark" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="static/css/singleDay.css" />
+</head>
+<body>
+
+<div class="container">
+    <!--头部标题-->
+    <div class="header">
+        <div class="title">
+            <img class="doge" src="static/images/doge.jpg" />
+            <span>Happy Single Day</span>
+        </div>
+    </div><!--header end-->
+
+    <!--表单内容-->
+    <div class="content">
+            <form id="form" action="/singleday/api" >
+            <div class="form-group">
+                <span class="question">1. 你的问题是出给谁的?</span>
+                <input type="radio" class="checkbox" name="gender" value="male" checked><label>男</label>
+                <input type="radio" class="checkbox" name="gender" value="female"><label>女</label>
+                <input type="radio" class="checkbox" name="gender" value="both"><label>Both</label>
+            </div>
+            <div class="form-group">
+                <span class="question">2. 你的问题是？</span>
+                <input class="text" type="text" name="question" placeholder="your question" required />
+            </div>
+            <div class="form-group">
+                <span class="question">3. 你心目中的正确答案是？</span>
+                <input class="text" type="text" name="answer" placeholder="your answer" required />
+            </div>
+            <div class="form-group">
+                <span class="question">4. 你觉得可以添加什么干扰选项呢？（非必填）</span>
+                <input class="text" type="text" name="options" placeholder="interferential options" />
+            </div>
+            <div class="form-group">
+                <span class="question">5. 你的微信号（非必填）：</span>
+                <input class="text" type="text" name="wechat" placeholder="your wechat ID" />
+                <span class="message">注意：如果你的问题被我们抽中，可以方便我们联系你们并送出礼品哦</span>
+            </div>
+            <div class="form-group">
+                <button id="submit">SUBMIT</button>
+            </div>
+        </form>
+    </div><!--content-->
+
+    <!--尾部版权-->
+    <div class="footer">
+        <span class="copy-right">Copyright © 暨南大学网络技术研讨会<br/>2016-2017.</span>
+    </div><!--footer end-->
+</div>
+
+<div class="modal">
+    <div class="modal-content">
+        <span class="close-btn">x</span>
+        <div class="modal-title">提交成功!</div>
+        <p>上天之doge，祝福着你</p>
+    </div>
+</div>
+
+<script src="static/javascript/singleDay.js"></script>
+</body>
+</html>
