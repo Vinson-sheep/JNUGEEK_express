@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>暨妹妹双十一活动规则表</title>
+    <link rel="shortcut icon" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="bookmark" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/static/jquery_ui/jquery-ui.css" />
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            color: black;
+        }
+        footer,header {
+            text-align: center;
+            background-color: #2c4359;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+        /*header*/
+        header{
+            padding: 50px 0;
+            font-size: 30px;
+        }
+        /*tabs*/
+        .tab-ol {
+            margin-left: 25px;
+        }
+        .tab-img {
+            max-width: 150px;
+            width: 80%;
+        }
+        /*footer*/
+        footer {
+            margin-top: 5px;
+            padding: 50px 20px;
+
+            font-size: 15px;
+        }
+
+        @media screen and (min-width: 600px) {
+            .container {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="container">
+    <header>
+        <span>五好青年成长计划</span>
+    </header>
+    <div id="tabs"><!--tabs start-->
+        <ul>
+            <li><a href="#tab-1">德</a></li>
+            <li><a href="#tab-2">智</a></li>
+            <li><a href="#tab-3">体</a></li>
+            <li><a href="#tab-4">美</a></li>
+            <li><a href="#tab-5">劳</a></li>
+        </ul>
+
+        <div id="tab-1">
+            <h3>得偿所愿</h3>
+            <p>
+                参与者选择号码确定题目，题目为某物品，参与者要在规定时间内尽可能得到物品，可以从任意渠道获得物品，也可以离开摊位寻找。
+            </p>
+        </div><!--tab-1 end-->
+
+        <div id="tab-2">
+            <h3>知己知彼</h3>
+            <p>
+                男女生扫描二维码进入直男/直女趣味知识测试，男、女得分前两名将会获得定制羊城通哦，没有胜出的参与者会随机抽取若干名送出小礼品。<br/><br />截止日期：11月16日晚24:00
+            </p>
+            <br/>
+            <a href="/singleday/brains/gender"><button id="tab-btn-1">前往活动区<span class="ui-icon ui-icon-caret-1-e"></span></button></a>
+        </div><!--tab-2 end-->
+
+        <div id="tab-3">
+            <h3>轻重有度</h3>
+            <p>
+                两名参与者参与，工作人员抽取“更轻”或“更重”的纸条，体重符合纸条上的条件者胜出。
+                <br/><br/>
+                自愿参加最轻最重的评比可以留下体重信息和联系方式，胜出者可获大奖。
+                <br/><br/>
+                ps: 体重以现场体重信息为准
+            </p>
+        </div><!--tab-3 end-->
+
+        <div id="tab-4">
+            <h3>你画我猜</h3>
+            <p>
+                工作人员微信摇骰子决定题目类型，参与者选号码确定题目后在纸上画出题目内容，在规定时间内让路人或者朋友根据图猜题。
+            </p>
+            <br/>
+            <h4>备注:</h4>
+            <ol class="tab-ol">
+                <li>不能让工作人员猜</li>
+                <li>不能说出题目上的字</li>
+                <li>画的时候不计时</li>
+                <li>纸上不能写字</li>
+            </ol>
+        </div><!--tab-4 end-->
+
+        <div id="tab-5">
+            <h3>多劳多得</h3>
+            <p>
+                扫码关注暨妹妹公众号，参与者在当天晚上11：30-12:00内将当天步数发给暨妹妹公众号（需要APP截图），工作人员会做统计，步数最高的人为胜者，由工作人员联系此人并送出奖品，奖品为水杯或哑铃（二选一）。
+            </p>
+            <img  class="tab-img" src="http://ovo9m1uaz.bkt.clouddn.com/home9.jpg" alt="暨妹妹" />
+        </div><!--tab-5 end-->
+
+    </div><!--tabs end-->
+
+    <footer>
+        <span>Copyright © 暨南大学网络技术研讨会 2016-2017.</span>
+    </footer>
+</div>
+
+
+<!--因为文档比较小，js代码直接内嵌-->
+<script src="/static/javascript/jquery-1.11.3.min.js"></script>
+<script src="/static/jquery_ui/jquery-ui.min.js"></script>
+<script>
+    $( "#tabs" ).tabs();
+    $( "#tab-btn-1" ).button();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+/*消除浏览器边距差异*/
+body,html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    color: black;
+    font-size: 20px;
+    font-family: "微软雅黑 Light";
+}
+/*定义一些全局用的class*/
+.hide {
+    visibility: hidden;
+}
+/*消除iphone浏览器默认样式*/
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    -webkit-appearance: none;}
+textarea {-webkit-appearance: none;}
+
+/*为header和footer设置公共样式*/
+header,footer {
+    text-align: center;
+    padding: 20px 20px;
+}
+/*header*/
+header{
+    font-size: 30px;
+}
+/*footer*/
+footer {
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+/*container*/
+.container {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.container .form-header{
+    text-align: center;
+}
+.container .question {
+    min-height: 350px;
+}
+/*container true-or-false*/
+.container .true-or-false p.title {
+    margin: 5px;
+}
+.container .true-or-false .radio-set {
+    font-size: 25px;
+}
+/*container single-option*/
+.container .single-option .big-img {
+    width: 50%;
+    min-width: 200px;
+}
+.container .single-option .small-img {
+    width: 150px;
+}
+/*container sorting-problem*/
+.container .sorting-problem ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container .sorting-problem li {
+    margin: 5px 3px;
+}
+.container #sorting-2 ul {
+    width: 50%;
+    float: left;
+}
+.container #sorting-2 li {
+    border: 1px solid black;
+    height: 150px;
+    overflow: hidden;
+}
+.container #sorting-2 img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+.single-option label,
+.indefinite-section label {
+    font-size: 15px;
+    color: #3e3e3e;
+}
+/*container form-next*/
+.container .form-next {
+    clear: both;
+    padding-top: 50px;
+}
+.container .form-next button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+.container .form-next button:hover {
+    background: #508fb5;
+    color: white;
+    cursor: pointer;
+}
+.container .form-next button:nth-of-type(2) {
+    display: none;
+}
+
+.container .true-or-false {
+    display: block;
+}
+.container .single-option {
+    display: none;
+}
+.container .indefinite-section {
+    display: none;
+}
+.container .sorting-problem {
+    display: none;
+}
+/*model*/
+#grade-show p:nth-of-type(2) {
+    font-size: 15px;
+}
+#grade-show p:nth-of-type(3) {
+    font-size: 50px;
+}
+#grade-show p:nth-of-type(4) {
+    font-size: 15px;
+}
+#grade-show p {
+    margin: 10px 0px;
+}
+/*time-count*/
+.time-count {
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    right: 0;
+    top:100px;
+    text-align: center;
+}
+.time-count span {
+    font-size: 20px;
+    line-height: 50px;
+}

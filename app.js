@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var home = require('./routes/home');
 var singleday = require("./routes/singleday");
+var test = require('./routes/test');
 
 var app = express();
 
@@ -20,11 +21,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/static', express.static(path.join(__dirname, 'static')));
 
 app.use('/', home);
 app.use('/singleday', singleday);
-app.use('/static', express.static('static'));
+app.use('/test', test);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,5 @@
+## MacOS 或 Linux 平台
+$ DEBUG=myapp npm start
+
+## Windows 平台
+> set DEBUG=myapp & npm start

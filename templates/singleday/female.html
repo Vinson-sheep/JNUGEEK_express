@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>暨妹妹双十一活动——知己知彼</title>
+    <link rel="shortcut icon" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="bookmark" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/static/jquery_ui/jquery-ui.css" />
+    <link rel="stylesheet" tyle="text/css" href="/static/css/brains.css" />
+    <style>
+
+    </style>
+</head>
+<body>
+
+<!--header-->
+<header class="ui-widget-header">
+    <span>“智”——知己知彼</span>
+</header><!--header end-->
+
+<!--
+container包含一个硬编程的表单
+此张表单为female，即为面向女性的问卷
+-->
+<div class="container">
+    <div class="form-container">
+        <!--
+        form-container负责显示题目的类型/分值/总数
+        同时还负责时间的倒数，如果时间结束则结束答题
+        如果显示的question类型改变了
+        form-container的内容也相应改变
+        同时
+        -->
+        <div class="form-header">
+            <span class="question-type"></span><br/>
+            （<span></span>）
+        </div><!--form-container end-->
+        <!--
+        question是负责显示表单内容
+        每一个question-box就是一道题目
+        每个div中会有一个class来指明这套题目的类型
+        题目的类型有true-or-false/single-option/indefinite-section/sorting-problem/drag-to
+        -->
+        <div class="question">
+            <form>
+                <!--one true-or-false-->
+                <!-- start -->
+                <div class="question-box true-or-false">
+                    <div>
+                        <p class="title">1. 崩坏3rd是暴雪娱乐公司的游戏作品</p>
+                        <div class="radio-set">
+                            <input type="radio" id="radio1" name="崩坏3rd是暴雪娱乐公司的游戏作品" value="true"/>
+                            <label for="radio1"><span class="ui-icon ui-icon-check"></span></label>
+                            <input type="radio" id="radio2" name="崩坏3rd是暴雪娱乐公司的游戏作品" value="false" />
+                            <label for="radio2"><span class="ui-icon ui-icon-close"></span></label>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">2. 姚明曾被NBA的休斯顿火箭队选中</p>
+                        <div class="radio-set">
+                            <input type="radio" id="radio3" name="姚明曾被NBA的休斯顿火箭队选中" value="true"/>
+                            <label for="radio3"><span class="ui-icon ui-icon-check"></span></label>
+                            <input type="radio" id="radio4" name="姚明曾被NBA的休斯顿火箭队选中" value="false" />
+                            <label for="radio4"><span class="ui-icon ui-icon-close"></span></label>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">3. C罗是西班牙著名足球运动员</p>
+                        <div class="radio-set">
+                            <input type="radio" id="radio5" name="C罗是西班牙著名足球运动员" value="true"/>
+                            <label for="radio5"><span class="ui-icon ui-icon-check"></span></label>
+                            <input type="radio" id="radio6" name="C罗是西班牙著名足球运动员" value="false" />
+                            <label for="radio6"><span class="ui-icon ui-icon-close"></span></label>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">4. 篮球比赛中，对正在投2分球的人发生犯规，对方投进，应罚球2个</p>
+                        <div class="radio-set">
+                            <input type="radio" id="radio7" name="篮球比赛中，对正在投2分球的人发生犯规，对方投进，应罚球2个" value="true" />
+                            <label for="radio7"><span class="ui-icon ui-icon-check"></span></label>
+                            <input type="radio" id="radio8" name="篮球比赛中，对正在投2分球的人发生犯规，对方投进，应罚球2个" value="false" />
+                            <label for="radio8"><span class="ui-icon ui-icon-close"></span></label>
+                        </div>
+                    </div>
+                </div><!--box-->
+
+                <!--two single-option-->
+                <!-- start-->
+                <div class="question-box single-option">
+                    <div>
+                        <p class="title">1. 图片所示的是什么游戏？</p>
+                        <img class="big-img" src="/static/images/图片1.png" />
+                        <div class="radio-set">
+                            <p>
+                                A.<label>炉石传说</label>
+                                <input type="radio" /><br/>
+                                B.<label>约瑟传说</label>
+                                <input type="radio" /><br/>
+                                C.<label>守望先锋</label>
+                                <input type="radio" /><br/>
+                                D.<label>以上都不是</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">2. 以下哪把枪是狙击步枪？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>98K</label>
+                                <input type="radio" /><br/>
+                                B.<label>M416（HK416）</label>
+                                <input type="radio" /><br/>
+                                C.<label>mini14</label>
+                                <input type="radio" /><br/>
+                                D.<label>以上都不是</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">3. 篮球之神是谁？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>乔丹</label>
+                                <input type="radio" /><br/>
+                                B.<label>詹姆斯</label>
+                                <input type="radio" /><br/>
+                                C.<label>科比</label>
+                                <input type="radio" /><br/>
+                                D.<label>姚明</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">4. 2017年NBA冠军是哪个队？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>马刺队</label>
+                                <input type="radio" /><br/>
+                                B.<label>热火队</label>
+                                <input type="radio" /><br/>
+                                C.<label>勇士队</label>
+                                <input type="radio" /><br/>
+                                D.<label>骑士队</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">5. 2016年NBA总决赛中FMVP是？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>凯文·杜兰特</label>
+                                <input type="radio" /><br/>
+                                B.<label>勒布朗·詹姆斯</label>
+                                <input type="radio" /><br/>
+                                C.<label>安德烈·伊戈达拉</label>
+                                <input type="radio" /><br/>
+                                D.<label>科怀·伦纳德</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">6. 在都为正品的情况下，以下哪双鞋的价格最高？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<img class="small-img" src="/static/images/图片4.png" /><label class="hide">A</label>
+                                <input type="radio" /><br/>
+                                B.<img class="small-img" src="/static/images/图片5.png" /><label class="hide">B</label>
+                                <input type="radio" /><br/>
+                                C.<img class="small-img" src="/static/images/图片6.png" /><label class="hide">C</label>
+                                <input type="radio" /><br/>
+                                D.<img class="small-img" src="/static/images/图片7.png" /><label class="hide">D</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">7. 你的男朋友想玩一款游戏，但电脑提示“缺少d3dx9_43.dll”，这时应该安装</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>Quicktime</label>
+                                <input type="radio" /><br/>
+                                B.<label>DirectX</label>
+                                <input type="radio" /><br/>
+                                C.<label>NET</label>
+                                <input type="radio" /><br/>
+                                D.<label>C++</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">8. 著名的nba2k游戏系列中nba2k9总共出现了几名中国球员？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>3名</label>
+                                <input type="radio" /><br/>
+                                B.<label>2名</label>
+                                <input type="radio" /><br/>
+                                C.<label>1名</label>
+                                <input type="radio" /><br/>
+                                D.<label>没有</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">9. 下列属于米哈游公司的游戏作品是？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<img class="small-img" src="/static/images/图片8.png" /><label class="hide">A</label>
+                                <input type="radio" /><br/>
+                                B.<img class="small-img" src="/static/images/图片9.png" /><label class="hide">B</label>
+                                <input type="radio" /><br/>
+                                C.<img class="small-img" src="/static/images/图片11.png" /><label class="hide">C</label>
+                                <input type="radio" /><br/>
+                                D.<label>以上都不是</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">10. 自行车型号specialized tarmac SL6价格是多少？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>80000</label>
+                                <input type="radio" /><br/>
+                                B.<label>80</label>
+                                <input type="radio" /><br/>
+                                C.<label>800</label>
+                                <input type="radio" /><br/>
+                                D.<label>8000</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">11. 现在什么电脑配件涨得最厉害？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>内存</label>
+                                <input type="radio" /><br/>
+                                B.<label>显卡</label>
+                                <input type="radio" /><br/>
+                                C.<label>CPU</label>
+                                <input type="radio" /><br/>
+                                D.<label>固态</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">12. 电影《魔兽》在中国的上映时间？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>2016年7月</label>
+                                <input type="radio" /><br/>
+                                B.<label>2015年6月</label>
+                                <input type="radio" /><br/>
+                                C.<label>2016年6月</label>
+                                <input type="radio" /><br/>
+                                D.<label>2015年7月</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">13. 选出下列图片中的内马尔</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<img class="small-img" src="/static/images/图片12.png" /><label class="hide">A</label>
+                                <input type="radio" /><br/>
+                                B.<img class="small-img" src="/static/images/图片13.png" /><label class="hide">B</label>
+                                <input type="radio" /><br/>
+                                C.<img class="small-img" src="/static/images/图片14.png" /><label class="hide">C</label>
+                                <input type="radio" /><br/>
+                                D.<img class="small-img" src="/static/images/图片15.png" /><label class="hide">D</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">14. 男朋友重要还是口红重要？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>男朋友/因为男朋友可以买口红</label>
+                                <input type="radio" /><br/>
+                                B.<label>口红</label>
+                                <input type="radio" /><br/>
+                                C.<label>都不重要</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">15. 如果你跟你的男朋友一起吃饭，快要吃完了，男生没有想要买单的迹象，这时你应该？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>继续等待，等待对方开口</label>
+                                <input type="radio" /><br/>
+                                B.<label>自己叫服务员来买单</label>
+                                <input type="radio" /><br/>
+                                C.<label>询问对方要不要买单，看对方反应</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                </div><!--box end-->
+
+                <!-- three indefinite-section-->
+                <!-- start -->
+                <div class="question-box indefinite-section">
+                    <div>
+                        <p class="title">1. 下面哪些是电竞队伍？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>AKB</label>
+                                <input type="checkbox" /><br/>
+                                B.<label>SKT</label>
+                                <input type="checkbox" /><br/>
+                                C.<label>EDG</label>
+                                <input type="checkbox" /><br/>
+                                D.<label>RNG</label>
+                                <input type="checkbox" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">2. 下列属于暴雪娱乐公司的作品是？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>魔兽争霸</label>
+                                <input type="checkbox" /><br/>
+                                B.<label>崩坏3rd</label>
+                                <input type="checkbox" /><br/>
+                                C.<label>绝地求生</label>
+                                <input type="checkbox" /><br/>
+                                D.<label>炉石传说</label>
+                                <input type="checkbox" /><br/>
+                                E.<label>英雄联盟</label>
+                                <input type="checkbox" /><br/>
+                                F.<label>星际争霸</label>
+                                <input type="checkbox" /><br/>
+                                G.<label>王者荣耀</label>
+                                <input type="checkbox" /><br/>
+                                H.<label>守望先锋</label>
+                                <input type="checkbox" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">3. 在篮球比赛中，下列情况需要罚球的是？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>对正在做投篮动作的人员发生犯规（对方投进）</label>
+                                <input type="checkbox" /><br/>
+                                B.<label>对正在做投篮动作的人员发生犯规（对方未投进）</label>
+                                <input type="checkbox" /><br/>
+                                C.<label>阻碍持球人员进行的非法身体接触</label>
+                                <input type="checkbox" /><br/>
+                                D.<label>以上都不需要罚球</label>
+                                <input type="checkbox" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">4. 魔兽争霸中有哪四大种族？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>人族</label>
+                                <input type="checkbox" /><br/>
+                                B.<label>娜迦族</label>
+                                <input type="checkbox" /><br/>
+                                C.<label>血精灵</label>
+                                <input type="checkbox" /><br/>
+                                D.<label>暗夜精灵</label>
+                                <input type="checkbox" /><br/>
+                                E.<label>兽族</label>
+                                <input type="checkbox" /><br/>
+                                F.<label>不死亡灵</label>
+                                <input type="checkbox" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                </div><!--box end-->
+
+                <!-- four sorting-problem-->
+                <!-- start-->
+                <div class="question-box sorting-problem">
+                    <div id="sorting-1">
+                        <p class="title">1. 请依次选出2011、2013、2014、2015、2016年NBA总冠军</p>
+                        <ul class="sorting-ul">
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>金州勇士队</span></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>圣安东尼奥马刺队</span></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>迈阿密热火队</span></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>克里夫兰骑士队</span></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>达拉斯小牛队</span></li>
+                        </ul>
+                    </div>
+                    <div id="sorting-2">
+                        <p class="title">2. 从价格、等级考虑，将下列对等的口红和鞋子左右配对</p>
+                        <ul>
+                            <li>
+                                <span>Air-Jordan</span>
+                                <img src="/static/images/single_1.png" />
+                            </li>
+                            <li>
+                                <span>人字拖</span>
+                                <img src="/static/images/single_2.png" />
+                            </li>
+                            <li>
+                                <span>阿迪王</span>
+                                <img src="/static/images/single_3.png" />
+                            </li>
+                            <li>
+                                <span>Vans</span>
+                                <img src="/static/images/single_4.png" />
+                            </li>
+                        </ul>
+                        <ul class="sorting-ul">
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>CL</span>
+                                <img src="/static/images/single_5.png" /></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>名创优品</span>
+                                <img src="/static/images/single_6.png" /></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>Tom Ford</span>
+                                <img src="/static/images/single_7.png" /></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>卡姿兰</span>
+                                <img src="/static/images/single_8.png" /></li>
+                        </ul>
+                    </div>
+                </div><!--box end-->
+            </form>
+        </div>
+        <!--
+        form-next是负责提供点击按钮的
+        如果点击按钮被click，则question将会跳转到下一题
+        当question类型为drag-to，则button内容和行为更变
+        button显示为提交问卷，click后会弹出model
+        model会通过ajax比对后台答案，同时返回一个成绩
+        -->
+        <div class="form-next">
+            <button class="ui-state-default">下一题</button>
+            <button class="ui-state-default">提交答卷</button>
+        </div><!--form-next end-->
+    </div>
+</div><!--container end-->
+
+<div id="grade-show" title="Happy singles day">
+    <p class="wechat"></p>
+    <p>你获得的分数是：</p>
+    <p class="grade-span"></p>
+    <p class="message">请对屏幕进行截图，以便我们核对获奖信息</p>
+</div><!--grade-show end-->
+
+<!--
+这个div会固定在屏幕的右上角
+负责显示倒计时
+当time为0,则停止答卷，立即执行表单提交
+-->
+<div class="time-count"><span></span></div>
+
+<footer class="ui-widget-header">
+    <span>Copyright © 暨南大学网络技术研讨会 2016-2017.</span>
+</footer><!--footer end-->
+
+<script src="/static/javascript/jquery-1.11.3.min.js"></script>
+<script src="/static/jquery_ui/jquery-ui.min.js"></script>
+<script src="/static/javascript/jquery.cookie.js"></script>
+<script src="/static/jquery_ui/jquery.ui.touch-punch.min.js"></script>
+<script src="/static/javascript/brains.js"></script>
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>暨妹妹双十一活动——知己知彼</title>
+    <link rel="shortcut icon" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="bookmark" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/static/jquery_ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/brains.css" />
+    <style>
+
+    </style>
+</head>
+<body>
+
+<!--header-->
+<header class="ui-widget-header">
+    <span>“智”——知己知彼</span>
+</header><!--header end-->
+
+<!--
+container包含一个硬编程的表单
+此张表单为female，即为面向女性的问卷
+-->
+<div class="container">
+    <div class="form-container">
+        <!--
+        form-container负责显示题目的类型/分值/总数
+        同时还负责时间的倒数，如果时间结束则结束答题
+        如果显示的question类型改变了
+        form-container的内容也相应改变
+        同时
+        -->
+        <div class="form-header">
+            <span class="question-type"></span><br/>
+            （<span></span>）
+        </div><!--form-container end-->
+        <!--
+        question是负责显示表单内容
+        每一个question-box就是一道题目
+        每个div中会有一个class来指明这套题目的类型
+        题目的类型有true-or-false/single-option/indefinite-section/sorting-problem/drag-to
+        -->
+        <div class="question">
+            <form>
+                <!--one true-or-false-->
+                <!-- start -->
+                <div class="question-box true-or-false">
+                    <div>
+                        <p class="title">1. 女朋友和他人起了冲突，向你寻求安慰，这时你要和她讲道理，毕竟除了你没人愿意给她讲这些社会上的大道理。</p>
+                        <div class="radio-set">
+                            <input type="radio" id="radio1" name="女朋友和他人起了冲突，向你寻求安慰，这时你要和她讲道理，毕竟除了你没人愿意给她讲这些社会上的大道理。" value="true" />
+                            <label for="radio1"><span class="ui-icon ui-icon-check"></span></label>
+                            <input type="radio" id="radio2" name="女朋友和他人起了冲突，向你寻求安慰，这时你要和她讲道理，毕竟除了你没人愿意给她讲这些社会上的大道理。" value="false" />
+                            <label for="radio2"><span class="ui-icon ui-icon-close"></span></label>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">2. 在你看球赛直播时，女朋友在一旁说：“一天就知道看篮球，吵死了，就不能不看吗？”这时你应该明白自己吵到她了，自觉戴上耳机不打扰她。</p>
+                        <div class="radio-set">
+                            <input type="radio" id="radio3" name="在你看球赛直播时，女朋友在一旁说：“一天就知道看篮球，吵死了，就不能不看吗？”这时你应该明白自己吵到她了，自觉戴上耳机不打扰她。" value="true" />
+                            <label for="radio3"><span class="ui-icon ui-icon-check"></span></label>
+                            <input type="radio" id="radio4" name="在你看球赛直播时，女朋友在一旁说：“一天就知道看篮球，吵死了，就不能不看吗？”这时你应该明白自己吵到她了，自觉戴上耳机不打扰她。" value="false" />
+                            <label for="radio4"><span class="ui-icon ui-icon-close"></span></label>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">3. 你和女朋友一起相约出去玩，她迟到了半个小时，你说没事，多玩了半个小时手机而已。</p>
+                        <div class="radio-set">
+                            <input type="radio" id="radio5" name="你和女朋友一起相约出去玩，她迟到了半个小时，你说没事，多玩了半个小时手机而已。" value="true" />
+                            <label for="radio5"><span class="ui-icon ui-icon-check"></span></label>
+                            <input type="radio" id="radio6" name="你和女朋友一起相约出去玩，她迟到了半个小时，你说没事，多玩了半个小时手机而已。" value="false" />
+                            <label for="radio6"><span class="ui-icon ui-icon-close"></span></label>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">4. 女朋友向你抱怨有一道题很难不会做，你帮她看了一下发现你也不会做，你直接上网找了一段答案发给了她。</p>
+                        <div class="radio-set">
+                            <input type="radio" id="radio7" name="女朋友向你抱怨有一道题很难不会做，你帮她看了一下发现你也不会做，你直接上网找了一段答案发给了她。" value="true" />
+                            <label for="radio7"><span class="ui-icon ui-icon-check"></span></label>
+                            <input type="radio" id="radio8" name="女朋友向你抱怨有一道题很难不会做，你帮她看了一下发现你也不会做，你直接上网找了一段答案发给了她。" value="false" />
+                            <label for="radio8"><span class="ui-icon ui-icon-close"></span></label>
+                        </div>
+                    </div>
+                </div><!--box-->
+
+                <!--two single-option-->
+                <!-- start-->
+                <div class="question-box single-option">
+                    <div>
+                        <p class="title">1. 以下哪张图为一般鼻影的正确区域？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<img class="small-img" src="/static/images/mate1.png" /><label class="hide">A</label>
+                                <input type="radio" /><br/>
+                                B.<img class="small-img" src="/static/images/mate2.png" /><label class="hide">B</label>
+                                <input type="radio" /><br/>
+                                C.<img class="small-img" src="/static/images/mate3.png" /><label class="hide">C</label>
+                                <input type="radio" /><br/>
+                                D.<img class="small-img" src="/static/images/mate4.png" /><label class="hide">D</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">2. 哪个牌子口红的正红色最出名？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>dior999</label>
+                                <input type="radio" /><br/>
+                                B.<label>ysl12</label>
+                                <input type="radio" /><br/>
+                                C.<label>阿玛尼201</label>
+                                <input type="radio" /><br/>
+                                D.<label>雅诗兰黛520</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="title">3. 以下哪个品牌不生产口红？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>杨树林</label>
+                                <input type="radio" /><br/>
+                                B.<label>雕牌</label>
+                                <input type="radio" /><br/>
+                                C.<label>艾格</label>
+                                <input type="radio" /><br/>
+                                D.<label>魅可</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">4. bobbi brown是卖什么的？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>香水</label>
+                                <input type="radio" /><br/>
+                                B.<label>衣服</label>
+                                <input type="radio" /><br/>
+                                C.<label>包包</label>
+                                <input type="radio" /><br/>
+                                D.<label>化妆品</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">5. 什么是姨妈色？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>姨妈们常用的颜色</label>
+                                <input type="radio" /><br/>
+                                B.<label>韩剧中口红的颜色</label>
+                                <input type="radio" /><br/>
+                                C.<label>姨妈血的颜色</label>
+                                <input type="radio" /><br/>
+                                D.<label>长辈们喜欢的颜色</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">6. 什么是斩男色？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>男生喜欢的颜色</label>
+                                <input type="radio" /><br/>
+                                B.<label>男生也会涂的颜色</label>
+                                <input type="radio" /><br/>
+                                C.<label>男生讨厌的颜色</label>
+                                <input type="radio" /><br/>
+                                D.<label>适合男生的颜色</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">7. 你和女朋友一起逛街，一个美女从你们身旁走过。你女朋友问你:“那个女孩长得好好看！”，你应该怎么接话？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>不好看</label>
+                                <input type="radio" /><br/>
+                                B.<label>没你好看</label>
+                                <input type="radio" /><br/>
+                                C.<label>腿好看</label>
+                                <input type="radio" /><br/>
+                                D.<label>什么女孩？我没看到</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">8. 什么是咬唇妆？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<img class="small-img" src="/static/images/mate5.png" /><label class="hide">A</label>
+                                <input type="radio" /><br/>
+                                B.<img class="small-img" src="/static/images/mate6.png" /><label class="hide">B</label>
+                                <input type="radio" /><br/>
+                                C.<img class="small-img" src="/static/images/mate7.png" /><label class="hide">C</label>
+                                <input type="radio" /><br/>
+                                D.<img class="small-img" src="/static/images/mate8.png" /><label class="hide">D</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">9. 女生说的以下哪句话是真的？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>“你太优秀了，我配不上你”</label>
+                                <input type="radio" /><br/>
+                                B.<label>“我马上就到啦”</label>
+                                <input type="radio" /><br/>
+                                C.<label>“我没生气啊，我能生什么气”</label>
+                                <input type="radio" /><br/>
+                                D.<label>“我这个月没钱了”</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">10. 以下哪句话中的“讨厌”不是女生真的讨厌？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>刚才听别人说有个很讨厌的女生跟你开玩笑</label>
+                                <input type="radio" /><br/>
+                                B.<label>讨厌，干嘛突然给我买包，是不是做了什么亏心事？</label>
+                                <input type="radio" /><br/>
+                                C.<label>我不是真的讨厌你喝酒，只是你同学聚会也要提前说一声嘛，我看合照还有女同学，女孩子那么晚回去多不安全啊</label>
+                                <input type="radio" /><br/>
+                                D.<label>你这样不顾忌我的感受真令我讨厌！</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">11. 不小心弄断了女朋友的口红，你该怎么办？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>疯狂道歉，再买一支一模一样的赔给她</label>
+                                <input type="radio" /><br/>
+                                B.<label>耐心地告诉她口红的危害，证明自己在帮她</label>
+                                <input type="radio" /><br/>
+                                C.<label>先发制人问她“口红和我，谁更重要？”</label>
+                                <input type="radio" /><br/>
+                                D.<label>立马转账，让她再去多买几支</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">12. 你们的恋爱纪念日到了，你却忘了给她买礼物，她说“没事，我不在意这些的”，你应该怎么办？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>紧紧抱住她，夸“我女朋友就是懂事啊！”</label>
+                                <input type="radio" /><br/>
+                                B.<label>急忙回答“那怎么行啊？你不知道要什么，那我帮你清空购物车吧！”</label>
+                                <input type="radio" /><br/>
+                                C.<label>道歉并承诺“我明天一定补给你，你想要什么啊？”</label>
+                                <input type="radio" /><br/>
+                                D.<label>亲一个，说“下次我一定送你一个超大的惊喜！”</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">13. 女朋友对你说“我发现自己最近胖了”，你应该怎么回答她？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>你哪里胖了，你一点儿都不胖啊</label>
+                                <input type="radio" /><br/>
+                                B.<label>少吃点嘛，控制自己的饮食</label>
+                                <input type="radio" /><br/>
+                                C.<label>没关系，我又不在意外表</label>
+                                <input type="radio" /><br/>
+                                D.<label>你这么一说，我还真觉得你胖了</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">14. 女朋友向你吐槽一个女生，你应该怎么做？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>和她一起挖那个女生的黑料</label>
+                                <input type="radio" /><br/>
+                                B.<label>教育她，让她思考一下自身是不是存在什么问题</label>
+                                <input type="radio" /><br/>
+                                C.<label>带她去买东西、吃东西，消消气</label>
+                                <input type="radio" /><br/>
+                                D.<label>耐心听她吐槽，不发表意见</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">15. 你和女朋友一起逛街，路过冰淇淋柜，她的脚步放慢了，看得出来她很想吃，但你想到她最近在减肥，这时你应该怎么办？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>贴心提示她“别忘了你在减肥哦！”</label>
+                                <input type="radio" /><br/>
+                                B.<label>径直拉走她，长痛不如短痛</label>
+                                <input type="radio" /><br/>
+                                C.<label>问她“想要美食还是身材呢？”</label>
+                                <input type="radio" /><br/>
+                                D.<label>马上买给她，说“吃吧，小馋猫”</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">16. 你随手点赞了一个女生的票圈，你女朋友此时的内心活动是？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>他干嘛突然点赞？他是不是看上了那女的？她是不是嫌弃我了？是不是想跟我分手？</label>
+                                <input type="radio" /><br/>
+                                B.<label>点个赞而已嘛，反正这女的没我好看</label>
+                                <input type="radio" /><br/>
+                                C.<label>诶，他们认识哦？</label>
+                                <input type="radio" /><br/>
+                                D.<label>这条票圈没什么内涵，这个女孩子也不咋地</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="title">17. 女朋友生病了，你应该对她说什么？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>多喝热水</label>
+                                <input type="radio" /><br/>
+                                B.<label>你看你，不运动，抵抗力不行了吧</label>
+                                <input type="radio" /><br/>
+                                C.<label>你在哪儿，我带你去看医生</label>
+                                <input type="radio" /><br/>
+                                D.<label>666啊</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">15. 以下哪种口红的质地最干? </p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>缎面</label>
+                                <input type="radio" /><br/>
+                                B.<label>哑光</label>
+                                <input type="radio" /><br/>
+                                C.<label>珠光</label>
+                                <input type="radio" /><br/>
+                                D.<label>奶油</label>
+                                <input type="radio" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                </div><!--box end-->
+
+                <!-- three indefinite-section-->
+                <!-- start -->
+                <div class="question-box indefinite-section">
+                    <div>
+                        <p class="title">1. 下面哪些话是万万不能当着女生面说的？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>你要这么想，我也没办法了</label>
+                                <input type="checkbox" d/><br/>
+                                B.<label>好，我错了行不行</label>
+                                <input type="checkbox" /><br/>
+                                C.<label>宝宝你为啥生气啊</label>
+                                <input type="checkbox" /><br/>
+                                D.<label>有必要吗</label>
+                                <input type="checkbox" /><br/>
+                                E.<label>千错万错都是我的错</label>
+                                <input type="checkbox" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">2. 女朋友问你“你妈和我同时掉进水里，你先救谁？”，你应该怎么回答？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>谁都不救，我也不会游泳</label>
+                                <input type="checkbox" /><br/>
+                                B.<label>当然是救你啦，我妈会游泳</label>
+                                <input type="checkbox" /><br/>
+                                C.<label>救我妈呗，妈只有一个</label>
+                                <input type="checkbox" /><br/>
+                                D.<label>我也跳进水里陪你们好不好</label>
+                                <input type="checkbox" /><br/>
+                                E.<label>就你才会想出那么无聊的问题</label>
+                                <input type="checkbox" /><br/>
+                                F.<label>谁离我近我就先救谁</label>
+                                <input type="checkbox" /><br/>
+                                G.<label>我妈说她不会掉进水里</label>
+                                <input type="checkbox" /><br/>
+                                H.<label>我觉得你们两个不会蠢到同时掉水里</label>
+                                <input type="checkbox" /><br/>
+                                I.<label>我先打局王者再想这个问题</label>
+                                <input type="checkbox" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">3. 女生说什么话时表明她真的生气了？</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>我一点儿都不生气</label>
+                                <input type="checkbox" /><br/>
+                                B.<label>嗯，你说什么都对</label>
+                                <input type="checkbox" /><br/>
+                                C.<label>我生气了，你快哄我</label>
+                                <input type="checkbox" /><br/>
+                                D.<label>呵呵，没事儿</label>
+                                <input type="checkbox" /><br/>
+                                E.<label>我才不会生气</label>
+                                <input type="checkbox" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="title">4. 两位女生在下面哪些情况下说明关系真的很好：</p>
+                        <div class="radio-set">
+                            <p>
+                                A.<label>一起相约上厕所</label>
+                                <input type="checkbox" /><br/>
+                                B.<label>一起相约图书馆学习</label>
+                                <input type="checkbox" /><br/>
+                                C.<label>购物一起拼单</label>
+                                <input type="checkbox" /><br/>
+                                D.<label>一起八卦另外一位女生</label>
+                                <input type="checkbox" /><br/>
+                                E.<label>追同一个明星</label>
+                                <input type="checkbox" /><br/>
+                                F.<label>给对方起外号</label>
+                                <input type="checkbox" /><br/>
+                            </p>
+                        </div>
+                    </div>
+                </div><!--box end-->
+
+                <!-- four sorting-problem-->
+                <!-- start-->
+                <div class="question-box sorting-problem">
+                    <div id="sorting-2">
+                        <p class="title">1. 请给左侧名字匹配右侧眉形：</p>
+                        <ul>
+                            <li><span>1. 标准眉</span></li>
+                            <li><span>2. 弧形眉</span></li>
+                            <li><span>3. 柳叶眉</span></li>
+                            <li><span>4. 新月眉</span></li>
+                            <li><span>5. 一字眉</span></li>
+                            <li><span>6. 黛玉眉</span></li>
+                        </ul>
+                        <ul class="sorting-ul">
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>A</span>
+                                <img src="/static/images/mate9.png" /></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>B</span>
+                                <img src="/static/images/mate10.png" /></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>C</span>
+                                <img src="/static/images/mate11.png" /></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>D</span>
+                                <img src="/static/images/mate12.png" /></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>E</span>
+                                <img src="/static/images/mate13.png" /></li>
+                            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><span>F</span>
+                                <img src="/static/images/mate14.png" /></li>
+                        </ul>
+                    </div>
+                </div><!--box end-->
+            </form>
+        </div>
+        <!--
+        form-next是负责提供点击按钮的
+        如果点击按钮被click，则question将会跳转到下一题
+        当question类型为drag-to，则button内容和行为更变
+        button显示为提交问卷，click后会弹出model
+        model会通过ajax比对后台答案，同时返回一个成绩
+        -->
+        <div class="form-next">
+            <button class="ui-state-default">下一题</button>
+            <button class="ui-state-default">提交答卷</button>
+        </div><!--form-next end-->
+    </div>
+</div><!--container end-->
+
+<div id="grade-show" title="Happy singles day">
+    <p class="wechat"></p>
+    <p>你获得的分数是：</p>
+    <p class="grade-span"></p>
+    <p class="message">请对屏幕进行截图，以便我们核对获奖信息</p>
+</div><!--grade-show end-->
+
+<!--
+这个div会固定在屏幕的右上角
+负责显示倒计时
+当time为0,则停止答卷，立即执行表单提交
+-->
+<div class="time-count"><span></span></div>
+
+<footer class="ui-widget-header">
+    <span>Copyright © 暨南大学网络技术研讨会 2016-2017.</span>
+</footer><!--footer end-->
+
+<script src="/static/javascript/jquery-1.11.3.min.js"></script>
+<script src="/static/jquery_ui/jquery-ui.min.js"></script>
+<script src="/static/javascript/jquery.cookie.js"></script>
+<script src="/static/jquery_ui/jquery.ui.touch-punch.min.js"></script>
+<script src="/static/javascript/brains2.js"></script>
+</body>
+</html>

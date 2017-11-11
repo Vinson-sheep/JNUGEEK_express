@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>暨妹妹双十一活动——知己知彼</title>
+    <link rel="shortcut icon" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="bookmark" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/static/jquery_ui/jquery-ui.css" />
+    <style>
+        body,html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+        header,footer {
+            text-align: center;
+            padding: 20px 20px;
+        }
+        /*header*/
+        header{
+            font-size: 30px;
+        }
+        /*container*/
+        .container {
+            max-width: 300px;
+            width: 80%;
+            margin: 70px auto;
+            box-shadow: 0 5px 7px 3px rgba(0,0,0,0.3);
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+        .gender-box {
+            text-align: center;
+            padding: 0 50px;
+        }
+        /*footer*/
+        footer {
+            font-size: 15px;
+            margin-top: 50px;
+        }
+        /*model*/
+        #dialog-confirm .dialog-p{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="ui-widget-header">
+    <span>“智”——知己知彼</span>
+</header>
+
+<!--容器-->
+<div class="container">
+    <a href="/singleday/brains/wechat"><div class="gender-box male ui-state-default ui-corner-top">
+        <img src="/static/images/material-gender-male.png" />
+    </div></a><!--male end-->
+
+    <a href="/singleday/brains/wechat"><div class="gender-box female ui-state-error ui-corner-bottom">
+        <img src="/static/images/material-gender-female.png" />
+    </div></a><!--female end-->
+
+</div><!--container end-->
+
+<footer class="ui-widget-header">
+    <span>Copyright © 暨南大学网络技术研讨会 2016-2017.</span>
+</footer>
+
+<!--模态框-->
+<div id="dialog-confirm" title="注意事项：">
+    <p class="dialog-p">
+        1. 本次测试共有4道判断题，15~18道单选题，4道不定项选择题，1~2道排序题。共计满分100分。<br/>
+        2. 答题时间为15分钟，若在规定时间内未完成将终止答题并计分。<br/>
+        3. 若中途退出答题则成绩作废。<br/>
+        4. 每个人仅有一次答题机会，机会不可失，失不再来。<br/>
+        5. 若分数过低也请不要失去生活的希望。
+    </p>
+</div>
+
+<script src="/static/javascript/jquery-1.11.3.min.js"></script>
+<script src="/static/jquery_ui/jquery-ui.min.js"></script>
+<script>
+    $(function() {
+        // 模态框
+        $( "#dialog-confirm" ).dialog({
+            resizable: false,
+            maxWidth: 400,
+            modal: true,
+            buttons: [
+                {
+                    text: "确认",
+                    click: function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+            ]
+        });// model end
+
+        // male和female按钮点击事件
+        // 如果点击了，都会跳转页面
+        // 同时在cookie上写下信息
+        // 点击male则gender=male
+        // 反之，gender=female
+        $(".male").click(function() {
+            $.cookie("gender", "male", {expires:2,path: '/'});
+        });
+        $(".female").click(function() {
+            $.cookie("gender", "female", {expires:2,path: '/'});
+        });
+    });
+</script>
+<script src="/static/javascript/jquery.cookie.js"></script>
+</body>
+</html>

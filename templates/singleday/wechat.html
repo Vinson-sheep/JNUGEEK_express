@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>暨妹妹双十一活动——知己知彼</title>
+    <link rel="shortcut icon" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="bookmark" href="http://ovo9m1uaz.bkt.clouddn.com/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/static/jquery_ui/jquery-ui.css" />
+    <style>
+        /*消除iphone浏览器默认样式*/
+        input[type="text"],
+        input[type="button"],
+        input[type="submit"],
+        input[type="reset"] {
+            -webkit-appearance: none;}
+        textarea {-webkit-appearance: none;}
+
+        body,html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+        header,footer {
+            text-align: center;
+            padding: 20px 20px;
+        }
+        /*header*/
+        header{
+            font-size: 30px;
+        }
+        /*container*/
+        .container {
+            min-height: 420px;
+        }
+        .container>div {
+            max-width: 500px;
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 70px;
+            padding: 50px;
+            box-sizing: border-box;
+            box-shadow: 0px 5px 7px 3px rgba(0,0,0,0.2);
+        }
+        .container .wechat-btn,
+        .container .check-btn {
+            box-sizing: border-box;
+            height: 40px;
+            display: block;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .container .wechat-btn {
+            font-size: 20px;
+            text-align: center;
+        }
+        .container .check-btn {
+            line-height: 20px;
+            font-size: 20px;
+            color: white;
+            background-color: #ee917c;
+        }
+        .container .check-btn:hover {
+            background-color: #e08772;
+            color: #c3c3c3;
+            transform: translate(0, 5px);
+            -ms-transform: translate(0, 5px);
+            -webkit-transform: translate(0, 5px);
+        }
+        .attention-text {
+            font-size: 10px;
+            color: black;
+        }
+        /*footer*/
+        footer {
+            font-size: 15px;
+            margin-top: 50px;
+        }
+        /*model*/
+        .dialog-p {
+            text-align: justify;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container>div {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="ui-widget-header">
+    <span>“智”——知己知彼</span>
+</header>
+
+<section class="container">
+    <div class="ui-state-default ui-corner-all">
+        <input name="wechat" class="wechat-btn" placeholder="your wechat" />
+        <input type="button" class="check-btn" value="开始挑战" />
+        <p class="attention-text">
+            <span class="ui-icon ui-icon-alert"></span>注意：准确填写微信号,我们才能将奖品准确送到你手上噢！
+        </p>
+    </div>
+</section>
+
+<footer class="ui-widget-header">
+    <span>Copyright © 暨南大学网络技术研讨会 2016-2017.</span>
+</footer>
+
+<!--模态框1-->
+<!--
+这个模态框负责显示输入wechat错误的信息
+使用这个
+-->
+<div id="dialog-confirm" title="">
+    <span class="dialog-span"></span>
+</div>
+
+<!--模态框2-->
+<!--
+当点击“开始挑战”
+后台函数将会抓取wechat输入框内容
+将其放置这个文本框中
+二次防止填写错误
+-->
+<div id="dialog-confirm2" title="只有一次机会：">
+    <span class="dialog-span"></span>
+    <br />
+    <span class="dialog-span">开始挑战</span>
+</div>
+
+<script src="/static/javascript/jquery-1.11.3.min.js"></script>
+<script src="/static/jquery_ui/jquery-ui.min.js"></script>
+<script>
+    $(function() {
+
+        // 重新定位
+        // 如果cookie没有gender，则
+        // 页面跳转到/singleday/brains/gender
+        if (!$.cookie("gender")) {
+            location.href = "/singleday/brains/gender";
+        }
+
+        // 模态框1
+        // 这个模态框用来显示wechat输入的错误信息
+        $( "#dialog-confirm").dialog({
+            autoOpen: false,
+            maxWidth: 400,
+            modal: true,
+            buttons: [
+                {
+                    text: "ok",
+                    click: function() {
+                        $(this).dialog("close");
+                    }
+                }
+            ]
+        });// model end
+
+        // 模态框2
+        // 这个模态框在check-btn被点击时显示
+        // 用来二次确认输入信息
+        $( "#dialog-confirm2").dialog({
+            autoOpen: false,
+            maxWidth: 400,
+            modal: true,
+            buttons: [
+                {
+                    text: "ok",
+                    click: function() {
+                        // 抓取wechat信息
+                        var wechat = $(".wechat-btn").val().trim();
+                        // 如果输入内容为
+                        // 放入cookie
+                        $.cookie("wechat", wechat, {expires:2,path: '/'});
+                        // 同时，还要跳转到相应页面
+                        // 此时需要判定cookie中的内容
+                        // 如果gender为male，则跳转的网址为/single/brains/male
+                        // 如果gender为female，则跳转的网址为/single/brains/female
+                        if ($.cookie("gender")) {
+                            var url = "/singleday/brains/" + $.cookie("gender");
+                            location.href = url;
+                        }
+                    }
+                }
+            ]
+        });// model end
+
+        // 这个函数将check-btn绑定事件
+        // 当按下check-btn时候会弹出模态框2进行信息验证
+        // 被验证的信息为wechet
+        $(".check-btn").click(function() {
+            // 首先进行表单验证
+            var wechat = $(".wechat-btn").val().trim();
+            if (isSecureWechat(wechat)) {
+                if (hasWechatNotPlayed(wechat)) {
+                    // 抓取微信信息,并且放入模态框2内
+                    $("#dialog-confirm2 .dialog-span:first-child").text("微信号： " + $(".wechat-btn").val());
+                    // 显示模态框2
+                    $("#dialog-confirm2").dialog("open");
+                } else {
+                    alertSomething("警告", "每个wechat ID只有一次机会,你已经参与过该活动了");
+                }
+            } else {
+                alertSomething("警告", "wechat不合法输入");
+            }
+
+        });
+
+        // 表单验证函数
+        // 这个函数只有一个str参数
+        // 输入一个str将返回一个布尔值
+        // true表示信息合格
+        function isSecureWechat(wechat_id) {
+            if (wechat_id && wechat_id.match(/^[0-9a-zA-Z][0-9a-zA-Z\-_]{5,19}$/)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        // 表单验证的第二函数
+        // 这个函数会通过ajax发送信息到/singleday/wechatCheck/api
+        // 以确认wechat是否已经参与过一次游戏
+        // 发送请求的时候附带wechat字符串
+        function hasWechatNotPlayed(wechat) {
+            var data;
+            $.ajax({
+                type: "GET",
+                url: "/singleday/wechatCheck/api?"+"wechat="+ wechat,
+                async: false,
+                success: function(result) {
+                    if (result == "true") {
+                        data = true;
+                    } else if (result == "false") {
+                        data = false;
+                    }
+                }
+            });
+            return data;
+        }
+
+        // 调用model-1
+        function alertSomething(title, content) {
+            $("#dialog-confirm")[0].setAttribute("title", title);
+            $("#dialog-confirm .dialog-span").text(content);
+            $("#dialog-confirm").dialog("open");
+        }
+
+    });
+</script>
+<script src="/static/javascript/jquery.cookie.js"></script>
+</body>
+</html>
